@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-yA-kYa">
+                                <rect key="frame" x="102" y="516" width="116" height="30"/>
+                                <color key="backgroundColor" red="0.59607843140000005" green="0.72549019609999998" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Family">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddFamilyBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ji-w1-s7i"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="voS-zp-37z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Bds-lm-Tov"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6Wh-np-o9k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CQG-yA-kYa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8AO-8f-cpf"/>
+                            <constraint firstItem="CQG-yA-kYa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="136:667" id="92u-sL-4uZ"/>
+                            <constraint firstItem="voS-zp-37z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GDE-Yg-bri"/>
+                            <constraint firstItem="CQG-yA-kYa" firstAttribute="top" secondItem="voS-zp-37z" secondAttribute="bottom" constant="26" id="cmN-RR-lst"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CQG-yA-kYa" secondAttribute="bottom" constant="22" id="gv0-ty-vuZ"/>
+                            <constraint firstItem="voS-zp-37z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qqh-mE-872"/>
+                            <constraint firstAttribute="trailing" secondItem="voS-zp-37z" secondAttribute="trailing" id="tCl-hJ-nyK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="relationShipTableView" destination="voS-zp-37z" id="mFz-GT-YHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.875" y="38.028169014084504"/>
+        </scene>
+    </scenes>
+</document>
